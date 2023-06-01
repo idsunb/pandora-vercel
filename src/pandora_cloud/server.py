@@ -39,7 +39,8 @@ class ChatBot:
 
     @staticmethod
     async def __get_userinfo():
-        access_token = request.cookies.get('access-token')
+        # access_token = request.cookies.get('access-token')
+        access_token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJob3BnbThrMnZ2QG1haWwxMHllYXIuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJodHRwczovL2FwaS5vcGVuYWkuY29tL2F1dGgiOnsidXNlcl9pZCI6InVzZXItNm5vWnNJYUdlMFczbDBpeGhVRlFobjgxIn0sImlzcyI6Imh0dHBzOi8vYXV0aDAub3BlbmFpLmNvbS8iLCJzdWIiOiJhdXRoMHw2NDY2MGNmZGRmMjZjNTczYzg0NGZhZjkiLCJhdWQiOlsiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MSIsImh0dHBzOi8vb3BlbmFpLm9wZW5haS5hdXRoMGFwcC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNjg1NTMwMzY3LCJleHAiOjE2ODY3Mzk5NjcsImF6cCI6IlRkSkljYmUxNldvVEh0Tjk1bnl5d2g1RTR5T282SXRHIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCBtb2RlbC5yZWFkIG1vZGVsLnJlcXVlc3Qgb3JnYW5pemF0aW9uLnJlYWQgb3JnYW5pemF0aW9uLndyaXRlIn0.wMTAtebYjJdtke8inwnjHbOB3l3W343UaijdUMWDaHJ0QqqBIb8f03qL5ZrjoB35i1nm9_rhCHNB3DguW62t1nphzKnkvBA0ZTfdbs3avlaKIreexxf6X2-YYDiI6HPFFKIriRTLXMauhWTOfqKomtMSdX2FL-9jM6SdCZTSMpaNnFnDyBF0tBkQa2ciAgtUiDnd1SHIH1m9ozGPbPM-8E7-HtuGxFs39-2KCu9ayioh-XXj9wEIE47xzNAJjjKnDuMdXfMUHvY7ez8QZNNrL7rpiPkpb_huXFMhtZPzCKXPl_s3UiJUeKeiWcwZdM6VqHpJ660BiK7ZcNbP1iAkuA'
         try:
             payload = check_access_token(access_token)
             if 'https://api.openai.com/auth' not in payload or 'https://api.openai.com/profile' not in payload:
